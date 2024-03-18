@@ -31,7 +31,7 @@ export async function getContext(query: string, file_key: string) {
   const qualifyingDocs = matches.filter(
     (match) => match.score && match.score > 0.7
   );
-
+  console.log(qualifyingDocs, "qualifyingDocs");
   type Metadata = {
     text: string;
     pageNumber: number;

@@ -13,7 +13,7 @@ export async function getEmbeddings(text: string) {
       input: text.replace(/\n/g, ""),
     });
     const result = await response.json();
-    // console.log("result :>> ", result);
+    console.log("result :>> ", result);
     return result.data[0]?.embedding as number[];
   } catch (error) {
     console.log("Error calling openai embedding api :>> ", error);
